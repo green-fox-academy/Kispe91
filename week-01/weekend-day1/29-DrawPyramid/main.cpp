@@ -8,7 +8,7 @@ int main(int argc, char* args[]) {
     int cycleVariable=0;
     for (int i = 0; i < (randomNumber+cycleVariable); ++i) {
         if (cycleVariable == randomNumber) {
-            i =+ (randomNumber+cycleVariable);
+            i = (randomNumber+cycleVariable);
         } else if (i >= randomNumber - (1 + cycleVariable)) {
             std::cout << "*";
             if (i == randomNumber + cycleVariable - 1) {
