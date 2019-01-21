@@ -13,6 +13,7 @@ int main(int argc, char* args[])
     } else {
         url.replace(start_pos, replaceWhat.length(), replaceWith);
     }
+    url.insert(5, ":");
     url.insert(url.length(), "/");
     std::cout << url << std::endl;
 
