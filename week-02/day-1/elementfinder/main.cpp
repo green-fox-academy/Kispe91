@@ -6,7 +6,6 @@ std::string containsSeven(const std::vector<int>& numbers)
 {
 int seekedNumber = 7;
 
-std::string results;
     for (int i = 0; i < numbers.size(); ++i) {
         if (numbers[i] == seekedNumber) {
             return "Hoorray";
