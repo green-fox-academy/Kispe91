@@ -11,16 +11,16 @@ int main()
         std::cin >> array[i];
     }
 
-    int stores = array[0];
-    int index=0;
+    int currentMaximumValue = array[0];
+    int arrayIndex = 0;
     for (int j = 0; j < sizeOfArray; ++j) {
-        if (array[j] > stores) {
-            stores = array[j];
-            index = j;
+        if (array[j] > currentMaximumValue) {
+            currentMaximumValue = array[j];
+            arrayIndex = j;
         }
     }
 
-    std::cout << "The biggest element of the array is: " << stores << " and its address is: " << array+index << std::endl;
+    std::cout << "The biggest element of the array is: " << currentMaximumValue << " and its address is: " << array + arrayIndex << std::endl;
     // Create a program which first asks for a number
     // this number indicates how many integers we want to store in an array
     // and than asks for numbers till the user fills the array
