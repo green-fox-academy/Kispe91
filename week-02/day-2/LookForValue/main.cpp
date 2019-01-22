@@ -1,14 +1,9 @@
 #include <iostream>
 
-int index (int array[], int arraySize, int number){
+int index (const int array[], int arraySize, int number){
 
-
-    int arrayCopy[arraySize];
-    for (int i = 0; i < arraySize; ++i) {
-        arrayCopy[i] = array[i];
-    }
     for (int j = 0; j < arraySize; ++j) {
-        if (arrayCopy[j] == number){
+        if (array[j] == number){
             return j;
         }
     }
