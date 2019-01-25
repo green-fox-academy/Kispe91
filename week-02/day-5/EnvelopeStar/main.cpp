@@ -24,9 +24,9 @@ SDL_Renderer* gRenderer = nullptr;
 void draw()
 {
 
-    int numberOfParts = 32;
-    int stepSizeX = SCREEN_WIDTH / numberOfParts;
-    int stepSizeY = SCREEN_HEIGHT / numberOfParts;
+    int numberOfSteps = 32;
+    int stepSizeX = SCREEN_WIDTH / numberOfSteps;
+    int stepSizeY = SCREEN_HEIGHT / numberOfSteps;
 
     int startXCoordinate = 0;
     int startYCoordinate = SCREEN_HEIGHT / 2;
@@ -34,8 +34,8 @@ void draw()
     int endYCoordinate = SCREEN_HEIGHT / 2;
 
 
-    for (int i = 0; i <= numberOfParts; ++i) {
-        if(i < numberOfParts / 2) {
+    for (int i = 0; i <= numberOfSteps; ++i) {
+        if(i < numberOfSteps / 2) {
             SDL_SetRenderDrawColor(gRenderer, 0x00, 0xFF, 0x00, 0xFF);
             SDL_RenderDrawLine(gRenderer, startXCoordinate + stepSizeX * i, startYCoordinate, endXCoordinate,
                                endYCoordinate - stepSizeY * (i + 1));
@@ -44,9 +44,9 @@ void draw()
         } else {
             SDL_SetRenderDrawColor(gRenderer, 0x00, 0xFF, 0x00, 0xFF);
             SDL_RenderDrawLine(gRenderer, startXCoordinate + stepSizeX * i, startYCoordinate, endXCoordinate,
-                               endYCoordinate - (numberOfParts - i +1) * stepSizeY);
+                               endYCoordinate - (numberOfSteps - i +1) * stepSizeY);
             SDL_RenderDrawLine(gRenderer, startXCoordinate + stepSizeX * i, startYCoordinate, endXCoordinate,
-                               endYCoordinate + (numberOfParts - i + 1) * stepSizeY);
+                               endYCoordinate + (numberOfSteps - i + 1) * stepSizeY);
     }
 
     }
