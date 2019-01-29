@@ -10,10 +10,10 @@ public:
     std::string publicationDate;
 
     BlogPost(std::string authorN, std::string tit, std::string txt, std::string pubDate) {
-        authorN = authorName;
-        tit = title;
-        txt = text;
-        pubDate = publicationDate;
+        authorName = authorN;
+        title = tit;
+        text = txt;
+        publicationDate = pubDate;
 
     }
 };
