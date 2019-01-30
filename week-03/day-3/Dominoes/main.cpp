@@ -19,14 +19,14 @@ int main(int argc, char* args[])
 {
     std::vector<Domino> dominoes = initializeDominoes();
 
-    dominoes.push_back(Domino(0, 0));
+    Domino temp(0, 0);
 
     for (int i = 0; i < dominoes.size(); ++i) {
         for (int j = i + 1; j < dominoes.size(); ++j) {
            if (dominoes[i].getValues().second == dominoes[j].getValues().first) {
-               dominoes[dominoes.size() - 1] = dominoes[i + 1];
+               temp = dominoes[i + 1];
                dominoes[i + 1] = dominoes[j];
-               dominoes[j] = dominoes[dominoes.size() - 1];
+               dominoes[j] = temp;
            }
         }
     }
