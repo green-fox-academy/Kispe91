@@ -20,13 +20,13 @@ int main() {
     return 0;
 }
 
-int fibonacci(int target)
+int fibonacci(int n)
 {
-    if(target > 1) {
-        return target + target - 1 + fibonacci(target - 2) ;
-    } else if (target == 1) {
-        return target;
-    } else {
+    if(n == 0) {
         return 0;
+    } else if (n == 1) {
+        return 1;
+    } else {
+        return (fibonacci(n - 1) + fibonacci(n - 2));
     }
 }
