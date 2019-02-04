@@ -13,8 +13,10 @@ public:
     void work();
     void party();
     std::string pirateIntroduction();
-    void getHealthPoint();
-    void getGoldAmount();
+    int getHealthPoint();
+    int getGoldAmount();
+    bool getLegType();
+    std::string getName();
 
 private:
 

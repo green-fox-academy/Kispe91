@@ -1,13 +1,17 @@
 #include "pirates.h"
 #include <vector>
+#include <string>
 
 #ifndef PIRATES_SHIP_H
 #define PIRATES_SHIP_H
 
-class Ship : public Pirates {
+class Ship {
 
 public:
 
+    Ship(std::vector<Pirates> ship);
+
+    std::string getPoorPirates();
 
 private:
 

@@ -37,10 +37,20 @@ std::string Pirates::pirateIntroduction() {
     }
 }
 
-void Pirates::getHealthPoint() {
-    std::cout << _healthPoint << std::endl;
+int Pirates::getHealthPoint() {
+    return _healthPoint;
 }
 
-void Pirates::getGoldAmount() {
-    std::cout << _gold << std::endl;
+int Pirates::getGoldAmount() {
+    return _gold;
+}
+
+bool Pirates::getLegType()
+{
+    return _isWoodenleg;
+}
+
+std::string Pirates::getName()
+{
+    return _nameOfPirates;
 }
