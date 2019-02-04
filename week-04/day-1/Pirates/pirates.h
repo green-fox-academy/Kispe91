@@ -10,7 +10,7 @@ public:
 
     Pirates(std::string nameOfPirates, int healthPoint, int gold, bool isCaptain, bool isWoodenLeg);
 
-    void work();
+    void work(int howManyTimes );
     void party();
     std::string pirateIntroduction();
     int getHealthPoint();

@@ -9,13 +9,13 @@ Pirates::Pirates(std::string nameOfPirates, int healthPoint, int gold, bool isCa
     _isWoodenleg = isWoodenLeg;
 }
 
-void Pirates::work() {
+void Pirates::work(int howManyTimes) {
     if (_isCaptain) {
-        _gold += 10;
-        _healthPoint -= 5;
+        _gold += 10 * howManyTimes;
+        _healthPoint -= 5 * howManyTimes;;
     } else {
-        _gold++;
-        _healthPoint--;
+        _gold += howManyTimes;
+        _healthPoint -= howManyTimes;
     }
 }
 

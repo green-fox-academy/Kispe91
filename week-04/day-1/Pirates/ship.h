@@ -14,6 +14,8 @@ public:
     // pirateRecruitment();
     std::string getPoorPirates();
     int getGold();
+    void lastDayOnTheShip();
+    void prepareForBattle();
 
 private:
 

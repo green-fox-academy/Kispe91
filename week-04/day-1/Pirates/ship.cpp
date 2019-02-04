@@ -30,3 +30,18 @@ int Ship::getGold()
     }
     return sum;
 }
+
+void Ship::lastDayOnTheShip()
+{
+    for (int i = 0; i < _ship.size(); ++i) {
+        _ship[i].party();
+    }
+}
+
+void Ship::prepareForBattle()
+{
+    for (int i = 0; i < _ship.size(); ++i) {
+        _ship[i].work(5);
+        _ship[i].party();
+    }
+}
