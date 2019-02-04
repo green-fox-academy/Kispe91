@@ -11,7 +11,9 @@ public:
 
     Ship(std::vector<Pirates> ship);
 
+    // pirateRecruitment();
     std::string getPoorPirates();
+    int getGold();
 
 private:
 

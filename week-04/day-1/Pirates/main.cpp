@@ -41,7 +41,8 @@ int main()
     Ship blackHawk(ship1);
 
     std::cout << blackHawk.getPoorPirates() << std::endl;
-
+    std::cout << std::to_string(blackHawk.getGold()) << std::endl;
+    
     return 0;
 }
 
