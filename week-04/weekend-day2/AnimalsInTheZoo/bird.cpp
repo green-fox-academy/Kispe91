@@ -1,9 +1,7 @@
 #include "bird.h"
 
-Bird::Bird(std::string name, int age)
+Bird::Bird(std::string name, int age) : Animal(name, age)
 {
-    _name = name;
-    _age = age;
 }
 
 std::string Bird::breed()

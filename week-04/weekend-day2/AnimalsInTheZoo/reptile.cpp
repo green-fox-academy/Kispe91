@@ -1,9 +1,7 @@
 #include "reptile.h"
 
-Reptile::Reptile(std::string name, int age)
+Reptile::Reptile(std::string name, int age) : Animal(name, age)
 {
-    _name = name;
-    _age = age;
 }
 
 std::string Reptile::breed()

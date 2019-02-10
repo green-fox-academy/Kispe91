@@ -1,10 +1,9 @@
 #include "mammal.h"
 
-Mammal::Mammal(std::string name, int age)
+Mammal::Mammal(std::string name, int age) : Animal(name, age)
 {
-    _name = name;
-    _age = age;
 }
+
 
 std::string Mammal::breed()
 {

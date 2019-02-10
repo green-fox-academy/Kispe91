@@ -7,6 +7,8 @@ class Animal {
 
 public:
 
+    Animal(std::string name, int age);
+
     virtual std::string  getName() = 0;
     virtual std::string breed() = 0;
 
