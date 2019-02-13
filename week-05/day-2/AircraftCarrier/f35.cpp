@@ -36,7 +36,7 @@ std::string F35::getStatus() {
 }
 
 bool F35::isPriority() {
-    return false;
+    return true;
 }
 
 int F35::getNecessaryAmmoAmountAircraft() {

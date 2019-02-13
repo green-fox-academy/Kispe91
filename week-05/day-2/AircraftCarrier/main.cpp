@@ -26,7 +26,7 @@ int main() {
     blackEagles.push_back(&f35_02);
     blackEagles.push_back(&f35_02);
 
-    Carrier blackPearl(blackEagles, 1000, 8000);
+    Carrier blackPearl(blackEagles, 50, 8000);
 
     std::vector <Aircraft *> whiteRaven;
 
@@ -49,7 +49,7 @@ int main() {
     whiteRaven.push_back(&f35_08);
     whiteRaven.push_back(&f35_09);
 
-    Carrier whitePearl(whiteRaven, 1000, 8000);
+    Carrier whitePearl(whiteRaven, 50, 8000);
 
     blackPearl.fill();
     whitePearl.fill();

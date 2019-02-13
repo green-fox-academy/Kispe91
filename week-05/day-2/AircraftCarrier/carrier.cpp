@@ -17,7 +17,7 @@ void Carrier::fill() {
             _necessaryAmmoAmountCarrier -= _vectorAircraft[i]->getNecessaryAmmoAmountAircraft();
             _ammoStoreCarrier = _vectorAircraft[i]->refill(_ammoStoreCarrier);
         }
-    } else if (_ammoStoreCarrier < getNecessaryAmmoAmountCarrier()) {
+    } else {
         for (int i = 0; i < _vectorAircraft.size(); ++i) {
             if (_vectorAircraft[i]->isPriority() && _ammoStoreCarrier > 0) {
                 _necessaryAmmoAmountCarrier -= _vectorAircraft[i]->getNecessaryAmmoAmountAircraft();
