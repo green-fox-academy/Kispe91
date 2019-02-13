@@ -7,7 +7,6 @@ F16::F16() : Aircraft()
 
 int F16::fight()
 {
-    _allDamageF16 = _ammoStoreF16 * _baseDamageF16;
     _ammoStoreF16 = 0;
     return _allDamageF16;
 }

@@ -7,7 +7,6 @@ F35::F35() : Aircraft()
 
 int F35::fight()
 {
-    _allDamageF35 = _ammoStoreF35 * _baseDamageF35;
     _ammoStoreF35 = 0;
     return _allDamageF35;
 }
