@@ -36,5 +36,7 @@ int main ()
         printf("%s",user_lines);
     }
 
+    fclose(file_pointer);
+
     return 0;
 }
