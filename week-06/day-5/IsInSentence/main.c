@@ -7,11 +7,11 @@ int is_sub(char *sentence, char *word);
 
 int main()
 {
-    // Create a program which asks for two strings and stores them
-    // Create a function which takes two strings as parameters and
-    // returns 1 if the shorter string is a substring of the longer one and
-    // returns 0 otherwise
-    // If the two strings has the same length than the function should return -1
+    // Create a function which takes two strings as parameters
+    // One string is actually a sentence and the other one is a word
+    // It should return 1 if the given sentence contains the given word
+    // and 0 otherwise
+    // Try to erase small and uppercase sensitivity.
 
     char user_sentence[100];
 
@@ -33,7 +33,8 @@ int is_sub(char *sentence, char *word) {
     int sum = 0;
 
     for (int i = 0; i < strlen(sentence); ++i) {
-        if (tolower(word[0]) == tolower(sentence[i]) && (sentence[i - 1] == ' ' || i == 0) && sentence[i + strlen(word)] == ' ') {
+        if (tolower(word[0]) == tolower(sentence[i]) && (sentence[i - 1] == ' ' || i == 0) &&
+        (sentence[i + strlen(word)] == ' ' || sentence[i + strlen(word)] == '\0')) {
             for (int j = 0; j < strlen(word); ++j) {
                 if (tolower(word[j]) == tolower(sentence[i + j])) {
                     sum++;
