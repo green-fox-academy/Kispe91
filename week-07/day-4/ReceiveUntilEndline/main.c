@@ -1,5 +1,6 @@
 #include "stm32f7xx.h"
 #include "stm32746g_discovery.h"
+#include <string.h>
 
 UART_HandleTypeDef UartHandle;
 
@@ -22,8 +23,11 @@ int main(void)
     BSP_COM_Init(COM1, &UartHandle);
 
     uint8_t buffer;
-    char user_input[100];
+    int array_size = 100;
+    char user_input[array_size];
     int counter = 0;
+
+    memset(user_input, '\0', array_size);
 
     while (1) {
 
