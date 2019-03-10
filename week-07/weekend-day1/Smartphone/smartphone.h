@@ -16,12 +16,12 @@ typedef enum {
 
 typedef struct smartphone {
     char *name;
-    int released_year;
+    unsigned int released_year;
     screen_size_t screen_size;
 } smartphone_t;
 
-int get_number_of_lines(char *path_name);
-smartphone_t *get_smartphones(char *path_name, int size);
+unsigned int get_number_of_lines(char *path_name);
+smartphone_t *get_smartphones(char *path_name, unsigned int number_of_lines);
 char *get_oldest_smartphone(smartphone_t array[], int array_size);
 int get_screen_size_count(smartphone_t array[], int array_size, screen_size_t screen_size);
 

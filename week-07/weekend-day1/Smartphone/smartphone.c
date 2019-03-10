@@ -1,12 +1,12 @@
 #include "smartphone.h"
 
-int get_number_of_lines(char *path_name)
+unsigned int get_number_of_lines(char *path_name)
 {
 
     FILE *file_pointer;
     file_pointer = fopen(path_name, "r");
 
-    int line_counter = 0;
+    unsigned int line_counter = 0;
 
     while(!feof(file_pointer)) {
         if(fgetc(file_pointer) == '\n') {
@@ -22,7 +22,7 @@ int get_number_of_lines(char *path_name)
     return line_counter;
 }
 
-smartphone_t *get_smartphones(char *path_name, int number_of_lines)
+smartphone_t *get_smartphones(char *path_name, unsigned int number_of_lines)
 {
     FILE *file_pointer;
     file_pointer = fopen(path_name, "r");
@@ -57,9 +57,9 @@ smartphone_t *get_smartphones(char *path_name, int number_of_lines)
         fgets(buffer, size_of_lines[line_index], file_pointer);
 
         char *name = strtok(buffer, " ");
-        int name_size = (int) strlen(name) + 1; //+1 for '\0'
+        unsigned int name_size = (unsigned int) strlen(name) + 1; //+1 for '\0'
 
-        smartphones[line_index].name = (char *)realloc(smartphones[line_index].name, name_size * sizeof(char));
+        smartphones[line_index].name = (char *)realloc(smartphones[line_index].name, name_size);
         strcpy(smartphones[line_index].name, name);
 
         char *releasedyear = strtok(NULL, " ");
@@ -86,7 +86,7 @@ smartphone_t *get_smartphones(char *path_name, int number_of_lines)
 char *get_oldest_smartphone(smartphone_t array[], int array_size)
 {
     int index = 0;
-    int oldest_year = CURRENT_YEAR;
+    unsigned int oldest_year = CURRENT_YEAR;
 
     for (int i = 0; i < array_size; ++i) {
         if(array[i].released_year < oldest_year) {
