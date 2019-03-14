@@ -27,9 +27,9 @@ smartphone_t *get_smartphones(char *path_name, unsigned int number_of_lines)
     FILE *file_pointer;
     file_pointer = fopen(path_name, "r");
 
-    int size_of_lines[number_of_lines];
-    int line_index = 0;
-    int line_size_counter = 0;
+    unsigned int size_of_lines[number_of_lines];
+    unsigned int line_index = 0;
+    unsigned int line_size_counter = 0;
 
     while(!feof(file_pointer)) {
         fgetc(file_pointer);
@@ -53,7 +53,8 @@ smartphone_t *get_smartphones(char *path_name, unsigned int number_of_lines)
 
     line_index = 0;
     while(!feof(file_pointer)) {
-        char buffer[size_of_lines[line_index]];
+        char *buffer = NULL;
+        buffer = (char *) realloc(buffer, size_of_lines[line_index]);
         fgets(buffer, size_of_lines[line_index], file_pointer);
 
         char *name = strtok(buffer, " ");
