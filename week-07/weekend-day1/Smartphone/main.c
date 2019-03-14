@@ -45,7 +45,7 @@
 
 int main() {
 
-    int lines;
+    unsigned int lines;
     char file_path[] = "../smartphone.txt";
 
     lines = get_number_of_lines(file_path);
@@ -56,5 +56,6 @@ int main() {
     printf("There are %d phones with SMALL (< 12 cm) screen size\n", get_screen_size_count(smartphones_array, lines, SMALL));
 
     free(smartphones_array);
+
     return 0;
 }

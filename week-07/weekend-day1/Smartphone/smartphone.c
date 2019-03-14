@@ -2,7 +2,6 @@
 
 unsigned int get_number_of_lines(char *path_name)
 {
-
     FILE *file_pointer;
     file_pointer = fopen(path_name, "r");
 
@@ -13,8 +12,8 @@ unsigned int get_number_of_lines(char *path_name)
             line_counter++;
         }
     }
-    char character = file_pointer->_ptr[(int) strlen(file_pointer->_ptr) - 1];
-    if(character != '\n') {
+    char last_character = file_pointer->_ptr[(unsigned int) strlen(file_pointer->_ptr) - 1];
+    if(last_character != '\n') {
         line_counter++;
     }
     fclose(file_pointer);
